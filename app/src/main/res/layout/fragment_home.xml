@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    card_view:contentPadding="@dimen/activity_vertical_margin"
+                    card_view:cardBackgroundColor="#ff9900">
+
+                    <RelativeLayout
+                        android:id="@+id/resume"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:id="@+id/view1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="40sp"
+                            android:textColor="#ffffff"
+                            android:text="New york" />
+                        <TextView
+                            android:id="@+id/view2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view1"
+                            android:textSize="25sp"
+                            android:textColor="#ffffff"
+                            android:text="OverCast"/>
+
+                        <TextView
+                            android:id="@+id/view3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="110dp"
+                            android:paddingLeft="240dp"
+                            android:layout_marginRight="1dp"
+                            android:textSize="80sp"
+                            android:textColor="#ffffff"
+                            android:text="0°"/>
+
+                        <ImageView
+                            android:id="@+id/test_image"
+                            android:layout_below="@id/view2"
+                            android:src="@drawable/weather_haze"
+                            android:layout_width="wrap_content"
+                            android:paddingTop="30dp"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view2"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:id="@+id/week"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <include
+                            android:id="@+id/firstDay"
+                            layout="@layout/weather_day"/>
+                        <include
+                            android:id="@+id/firstDay2"
+                            layout="@layout/weather_day"/>
+                        <include
+                            android:id="@+id/firstDay3"
+                            layout="@layout/weather_day"/>
+                        <include
+                            android:id="@+id/firstDay4"
+                            layout="@layout/weather_day"/>
+                        <include
+                            android:id="@+id/firstDay5"
+                            layout="@layout/weather_day"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view3"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <LinearLayout
+                        android:id="@+id/infos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <include
+                            layout="@layout/weather_infos"/>
+                        <include
+                            layout="@layout/weather_infos"/>
+                        <include
+                            layout="@layout/weather_infos"/>
+                        <include
+                            layout="@layout/weather_infos"/>
+                        <include
+                            layout="@layout/weather_infos"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+        </LinearLayout>
+</ScrollView>
